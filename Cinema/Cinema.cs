@@ -10,11 +10,23 @@ namespace Cinema
     {
         string name;
         decimal money;
-        Film[] films;
-        Hall[] halls;
-        Ticket[] tickets;
+        List<Film> films;
+        List<Hall> halls;
+        List<Ticket> tickets;
+        public string Name { get { return name; } }
+        public decimal Money { get { return money; } }
+        public List<Film> Films { get { return films; } }
+        public List<Hall> Halls { get { return halls; } }
+        public List<Ticket> Tickets { get { return tickets; } }
 
-
+        public Cinema(string name, decimal money, List<Film> films, List<Hall> halls, List<Ticket> tickets)
+        {
+            this.name = name;
+            this.money = money;
+            this.films = films;
+            this.halls = halls;
+            this.tickets = tickets;
+        }
 
         //список ПроданіКвитки(не клас)
 

@@ -54,7 +54,6 @@
     <Compile Include="Seat.cs" />
     <Compile Include="SeatPlace.cs" />
     <Compile Include="Ticket.cs" />
-    <Compile Include="TicketsSold.cs" />
     <Compile Include="Viewer.cs" />
     <Compile Include="VipSeat.cs" />
   </ItemGroup>

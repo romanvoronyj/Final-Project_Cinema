@@ -24,7 +24,7 @@ namespace Cinema
         }
         public override string ToString()
         {
-            return ($"Прізвище та ім'я глядача: {lastName} {firstName}, Вік: {age}");
+            return string.Format($"Прізвище та ім'я глядача: {lastName} {firstName}, Вік: {age}");
         }
     }
 }

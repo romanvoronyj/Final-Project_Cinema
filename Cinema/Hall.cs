@@ -10,27 +10,28 @@ namespace Cinema
     {
         int number;
         int seatsNumber;
-        Seat[] seats;
+        List<Seat> seats;
         decimal price;
 
         public int Number { get { return number; } }
         public int SeatsNumber { get { return seatsNumber; } }
-        public Seat this[int index] { get { return seats[index]; } }
+        public List<Seat> _seats{ get { return seats; } }
         public decimal Price { get { return price; } }
 
-        public Hall(int number, int seatsNumber, decimal price)
+        public Hall(int number, int seatsNumber, List<Seat> seats, decimal price)
         {
             this.number = number;
             this.seatsNumber = seatsNumber;
+            this.seats = _seats;
             this.price = price;
         }
         public override string ToString()
         {
-            return string.Format("$Кінозал 3D на 500 осіб");
+            return string.Format($"Кінозал 3D на {_seats} осіб");
         }
         public string ToShortString()
         {
-            return ($"Кінозал: 3D ");
+            return string.Format($"Кінозал: 3D ");
         }
     }
 }

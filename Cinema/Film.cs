@@ -15,7 +15,7 @@ namespace Cinema
         decimal price;
         DateTime startDate;
         public DateTime endDate;
-        FilmScreening[] filmScreenings;
+        List<FilmScreening> filmScreenings;
 
 
         public int FilmId
@@ -75,6 +75,17 @@ namespace Cinema
                 return endDate;
             }
         }
+        public List<FilmScreening> FilmScreenings
+        {
+            get
+            {
+                return filmScreenings;
+            }
+            set
+            {
+                filmScreenings = value;
+            }
+        }
         public Film (int filmId, string name, int minAge, string description, decimal price, DateTime startDate, DateTime endDate)
         {
             this.filmId = filmId;
@@ -93,7 +104,7 @@ namespace Cinema
         }
         public string ToShortString()
         {
-            string review = $"Прем'єра: 1995 рік.\nТривалість: 177 хв.\nКасові збори:$210 мільйонів." ;
+            string review = "Прем'єра: 1995 рік.\nТривалість: 177 хв.\nКасові збори:$210 мільйонів.";
             return(review);
         }
     }

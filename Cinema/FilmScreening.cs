@@ -11,11 +11,12 @@ namespace Cinema
         int filmScreeningId;
         Film film;
         Hall hall;
-        SeatPlace[] seatPlaces;
+        List<SeatPlace> seatPlaces;
         DateTime dateTime;
         public int FilmScreeningId { get { return filmScreeningId; } }
+        public List<SeatPlace> SeatPlaces { get { return seatPlaces; } set { seatPlaces = value; } }
 
-        public FilmScreening(int filmScreeningId, Film film, Hall hall, DateTime dateTime)
+        public FilmScreening(int filmScreeningId, Film film, Hall hall,  DateTime dateTime)
         {
             this.filmScreeningId = filmScreeningId;
             this.film = film;

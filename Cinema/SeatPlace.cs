@@ -11,5 +11,9 @@ namespace Cinema
         bool busy;
 
         public bool PlaceAvailability { get { return busy; } }
+        public SeatPlace(bool busy)
+        {
+            this.busy = busy;
+        }
     }
 }
